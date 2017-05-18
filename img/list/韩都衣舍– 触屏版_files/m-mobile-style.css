@@ -1,0 +1,225 @@
+#QIAO_ICON_CONTAINER,
+#QIAO_ICON_CONTAINER span,
+#QIAO_ICON_CONTAINER strong,
+#QIAO_INVITE_CONTAINER,
+#QIAO_INVITE_CONTAINER ins,
+#QIAO_INVITE_CONTAINER a {
+    /**
+     * width: 100%;
+     */
+    width: auto;
+    height: auto;
+
+    /**
+     * margin: 0 auto;
+     */
+    margin: 0;
+    padding: 0;
+
+    background-color: transparent;
+    background-position: 0% 0%;
+    background-size: auto; 
+    background-repeat: repeat;
+    background-origin: padding-box; 
+    background-clip: border-box; 
+    background-attachment: scroll; 
+    background-image: none;
+
+    border: none;
+    outline: invert none medium;
+
+    color: #000;
+    direction: ltr;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+    text-transform: none;
+    white-space: normal;
+    word-spacing: normal;
+
+    font-size: 12px;
+    font-family: Tahoma,"宋体",Helvetica,sans-serif;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: inherit;
+
+    visibility: inherit;
+    overflow:  visible;
+
+    list-style: none;
+
+    float: none;
+    /**
+     * clear: both;
+     */
+    clear: none;
+
+    position: static;
+    top: auto;
+    left: auto;
+
+    vertical-align: baseline;
+
+    -moz-box-sizing: content-box;  
+    -webkit-box-sizing: content-box; 
+    -o-box-sizing: content-box; 
+    -ms-box-sizing: content-box; 
+    box-sizing: content-box;
+}
+
+#QIAO_ICON_CONTAINER:before,
+#QIAO_ICON_CONTAINER:after,
+#QIAO_ICON_CONTAINER span:before,
+#QIAO_ICON_CONTAINER span:after,
+#QIAO_ICON_CONTAINER strong:before,
+#QIAO_ICON_CONTAINER strong:after,
+#QIAO_INVITE_CONTAINER:before,
+#QIAO_INVITE_CONTAINER:after,
+#QIAO_INVITE_CONTAINER ins:before,
+#QIAO_INVITE_CONTAINER ins:after,
+#QIAO_INVITE_CONTAINER a:before,
+#QIAO_INVITE_CONTAINER a:after {
+    content: '';
+}
+
+#QIAO_ICON_CONTAINER span,
+#QIAO_ICON_CONTAINER strong {
+    display: inline;
+}
+#QIAO_ICON_CONTAINER {
+    position: fixed;
+    display: block;
+    text-decoration: none;
+    display: block !important;
+    z-index: 2147483647;
+}
+
+#QIAO_ICON_CONTAINER.qiao-icon-sector {
+    bottom: 0px;
+    right: 0px;
+    width: 5em;
+    height: 5em;
+    overflow: hidden;
+    cursor: pointer;
+    line-height: 1;
+} 
+
+#QIAO_ICON_CONTAINER .qiao-icon-sector-inner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 10em;
+    height: 10em;
+    background: #CCC;
+    -webkit-border-radius: 5em;
+    -moz-border-radius: 5em;
+    -o-border-radius: 5em;
+    border-radius: 5em;
+}
+
+#QIAO_ICON_CONTAINER .qiao-icon-sector-inner strong {
+    font-weight: bold;
+    line-height: 1;
+    position: absolute;
+    top: 2.5em;
+    left: 1em;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#QIAO_ICON_CONTAINER.qiao-icon-sector-left {
+    left: 0px;
+    right: auto;
+}
+
+#QIAO_ICON_CONTAINER.qiao-icon-sector-left .qiao-icon-sector-inner {
+    right: 0px;
+    left: auto;
+}
+
+#QIAO_ICON_CONTAINER.qiao-icon-sector-left .qiao-icon-sector-inner strong {
+    right: 1em;
+    left: auto;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#QIAO_ICON_CONTAINER.qiao-icon-bar {
+    line-height: 1.3;
+    width: 1em;
+    padding: 1em;
+    cursor: pointer;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+}
+
+#QIAO_ICON_CONTAINER.qiao-icon-round {
+    line-height: 1;
+    width: 2.1em;
+    padding: 1em;
+    -webkit-border-radius: 3em;
+    -moz-border-radius: 3em;
+    -ms-border-radius: 3em;
+    -o-border-radius: 3em;
+    border-radius: 3em;
+}
+#QIAO_INVITE_CONTAINER {
+    position: fixed;
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 12px;
+    background-repeat: no-repeat;
+    padding-bottom: 2em;
+    z-index: 2147483647;
+}
+
+#QIAO_INVITE_CONTAINER ins {
+    text-decoration: none;
+    display: block;
+}
+
+#QIAO_INVITE_CONTAINER .qiao-invite-opt {
+    position: absolute;
+    width: 100%;
+    height: 2em;
+    left: 0px;
+    bottom: 1px;
+    min-width: 9em;
+}
+
+#QIAO_INVITE_CONTAINER .qiao-invite-opt a {
+    float: left;
+    height: 2em;
+    line-height: 2em;
+    width: 49%;
+    margin-left: 1px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#QIAO_INVITE_CONTAINER .qiao-invite-opt a.qiao-invite-chat {
+    float: right;
+    margin-left: 0px;
+    margin-right: 1px;
+}
+
+#QIAO_INVITE_CONTAINER .qiao-invite-text {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    line-height: 1.5;
+    width: 100%;
+}

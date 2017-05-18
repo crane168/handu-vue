@@ -1,0 +1,244 @@
+<html>
+ <head>
+  <meta charset=UTF-8" /> 
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport" /> 
+  <meta content="handuyishe,韩都衣舍官方网站,韩都衣舍手机网" name="keywords" /> 
+  <meta content="韩都衣舍官方手机网站" name="description" /> 
+  <title>首页</title> 
+  <!-- home样式 -->
+  <link rel="stylesheet" type="text/css" href="css/home/base.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/home/style.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/home/flex.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/home/wap2.css" /> 
+  <!-- <link rel="stylesheet" type="text/css" href="css/home/m-mobile-style.css"/> -->
+  <!-- pxh样式 -->
+  <link rel="stylesheet" type="text/css" href="css/list/wapc.css">
+  <!-- 详情页视图 -->
+  <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css">
+ </head>
+ <body>
+  <!-- 左侧栏部分 -->
+  <div id="app">
+  <component v-bind:comp-search="sendSeach" v-bind:is="view"></component>
+  <footer>
+   <p>鲁ICP备14003322号-2 &copy;2006-2014 handu.com </p>
+   <p>All Rights Reserved. </p>
+   <p>韩都衣舍电子商务集团股份有限公司</p>
+   <a href="" target="_blank"><img border="0" src="img/home/bd.gif" width="20" height="20" /></a>
+   <a href="" target="_blank" title="站长统计">站长统计</a>
+   <a href="" target="_blank" title="站长统计">站长统计</a>
+  </footer>
+  </div>
+  <!-- <script src="js/home/goods_no068.js"></script>  -->
+  <!-- <script src="js/home/jquery-1.9.1.min.js"></script>  -->
+  <script src="js/home/html5v3.js"></script> 
+  <!-- <script src="js/home/search.js"></script>  -->
+  <script src="js/home/jquery.flexslider-min.js"></script> 
+  <script type="text/javascript">
+  $(function() {
+     $('.flex_300 .flexslider').flexslider({
+           animation: "slide",     
+           before: function(){
+           $('.flex_420').css({'background':'#000'});
+           }
+     });
+  });
+</script> 
+ </body>
+ <script type="text/template" id="tpl_home">
+   <div class="main" v-on:click="hidecelan"> 
+   <div class="menu-list"> 
+    <ul> 
+     <!-- <li>品牌选择</li>  -->
+     <li v-for="item in celan"> 
+     <a href="">{{item.title}}</a> 
+     </li> 
+    </ul> 
+   </div> 
+   <!-- header部分 -->
+   <div class="header"> 
+    <a href="javascript:void(0)" class="top_bt fl" id="menu-btn" v-on:click="showcelan"></a> 
+    <a href="javascript:void(0)" class="logo">韩都衣舍</a> 
+   </div> 
+   <!-- header部分结尾 -->
+   <!-- 轮播图部分start -->
+   <div class="wap_wrap"> 
+    <div class="flex-container flex_300"> 
+     <div class="flexslider" style="overflow: hidden;"> 
+      <ul class="slides" style="transition-duration: 0s; width: 600%; transform: translate3d(-320px, 0px, 0px);">
+       <li class="clone" style="width: 320px; float: left; display: block;"> <a href=""><img src="img/home/01.jpg" /></a> </li> 
+       <li style="width: 320px; float: left; display: block;"> <a href=""><img src="img/home/d3.png" /></a> </li> 
+      </ul> 
+      <ol class="flex-control-nav"> 
+       <li><a class="active">1</a></li> 
+       <li><a class="">2</a></li>
+      </ol>
+      <ul class="flex-direction-nav"> 
+       <li><a class="prev" href="m.handu.com/#">Previous</a></li> 
+       <li><a class="next" href="m.handu.com/#">Next</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="icon_set"> 
+      <input id="J_searchtext" class="inp-search" name="product_search_txt" autocomplete="off" placeholder="搜索韩都衣舍商品" /> 
+      <input type="text" class="search_btn1" v-model="search" v-on:keydown.enter="goSeach"/>
+     <ul> 
+      <li v-for="item in fenlei"> 
+      <a v-bind:href="'#/list/type/'+item.id"><img v-bind:src="'img/home/'+item.url" width="40" /></a><p>{{item.mingming}}</p> 
+      </li> 
+     </ul> 
+    </div> 
+    <img src="img/home/line.png" /> 
+    <div> 
+     <a v-bind:href="'#/list/'"><img v-bind:src="'img/home/'+ayi.url" style="margin-left:8px; margin-top:20px; float:left; margin-bottom:20px;" width="304" /></a> 
+     <a v-bind:href="'#/list2/1'"><img v-bind:src="'img/home/'+pxh.url" style="margin-left: 8px;margin-bottom: 20px" width="304" /></a> 
+    </div> 
+    <img src="img/home/line.png"/> 
+    <div> 
+     <a v-bind:href="'#/list/'"><img src="img/home/1.jpg" style="margin-left:8px; margin-top:20px; float:left; margin-bottom:20px;" width="101" height="152" /></a> 
+     <a v-bind:href="'#/list/'"><img src="img/home/2.jpg" style=" margin-left:2px; margin-top:20px;" width="101" height="152" /></a> 
+     <a v-bind:href="'#/list/'"><img src="img/home/3.jpg" style="margin-top:20px; margin-left:-2px;" width="101" height="152" /></a> 
+    </div> 
+    <img src="img/home/line.png" style="margin-bottom:20px;" /> 
+    <h2 class="red_t">【首页商品】热卖单品推荐</h2> 
+    <div class="product_11"> 
+     <ul> 
+      <li v-for="item in xqy"> 
+      <a v-bind:href="'#/list/type'+item.id" style="position:relative; width:140px; height:140px; display:block;"> <img v-bind:src="'img/home/'+item.url" style="position:absolute;" /></a> 
+      <p> <span class="fl_1">特惠价</span> <span class="fl_2">{{item.sale}}</span> </p> 
+      </li>  
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+ </script>
+ <script type="text/template" id="tpl_list2">
+    <div class="all">
+      <a v-for="item in pxh" v-bind:href="'#/detail/type/'+item.id"><img v-bind:src="'img/list/pxh/'+item.url"></a>
+    </div>     
+ </script>
+ <script type="text/template" id="tpl_list">
+  <div class="main" v-on:click="hidecelan"> 
+      <div class="menu-list" >
+        <ul>
+            <li v-for="item in celan">
+                <a v-bind:href="javascript:void(0)">{{item.title}}</a>
+            </li>
+        </ul>
+      </div>        
+        <header>
+            <a href="javascript:void(0)" class="top_bt fl" id="menu-btn" v-on:click="showcelan"></a>
+            <span class="jiantou" v-on:click="goBack">&lt;</span>
+            <a href="javascript:void(0)" class="logo">商品列表</a>
+            <a href="" class="top_bt" id="cart-btn"></a>
+        </header>
+        <section class="region">
+            <ul class="product_nav clearfix"> 
+                <li v-for="item in pjl"  v-on:click="productSortBy(item.id)">
+                    <span>{{item.text}}</span>
+                </li> 
+            </ul>
+            <div class="product_list">
+                <ul> 
+                     <li v-for="item in xqy"> 
+                      <a v-bind:href="'#/detail/type/'+item.id">
+                        <dl class="clearfix line_none"> 
+                            <dd><span><img class="lazy" v-bind:src="'img/list/xqy/'+item.url" v-bind:title="item.title" width="70" height="70" style="display: inline;"></span></dd> 
+                            <dt> 
+                            <span class="name">{{item.title}}</span> <br> 
+                            <span class="money">{{item.money}}</span>
+                            <span class="old-money">{{item.old_money}}</span> <br> 
+                            <span>{{item.sell}}</span>
+                            </dt> 
+                        </dl> 
+                      </a>
+                     </li>
+                 </ul>
+             </div>
+         <div class="load-more" v-show="other.length" v-on:click="loadMore">
+          <span>查看剩余{{other.length}}条团购</span>
+          <span class="arrow"><span class="arrow green"></span></span>
+        </div>
+      </section>
+    </div>
+ </script>
+ <script type="text/template" id="tpl_detail">
+ 	 <div class="container">
+		<div class="header">
+			<span></span>
+			<span></span>
+			<span class="jiantou_detail" v-on:click="goBack">&lt;</span>
+			<h1>商品详情页</h1>
+		</div>
+		<div class="swiper-container">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide" v-for="item in detail" v-bind:style="{backgroundImage:'url(img/detail/'+item.lb1+')'}"></div>
+	           <!--  <div class="swiper-slide" v-for="item in detail">
+	            	<img v-bind:src="'img/detail/'+item.lb1">
+	            </div> -->
+	        </div>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination"></div>
+	        <!-- Add Arrows -->
+	        <div class="swiper-button-prev"></div>
+	        <div class="swiper-button-next"></div>
+    </div>
+    <div id="slideBox" class="slideBox">
+		<div class="hd">
+			<ul>
+				<li class="on">简介</li>
+				<li>详情</li>
+				<li>评价</li>
+			</ul>
+		</div>
+		<div class="bd">
+			<ul class="u1">
+				<li><a href="" title="">{{intro.title}}</a></li>
+				<li><span>价格：</span><span>{{intro.sale}}</span></li>
+				<li><span>颜色:</span><span>{{intro.color1}}</span><span>{{intro.color2}}</span></li>
+				<li><span>尺码:</span><span>{{intro.rule1}}</span><span>{{intro.rule2}}</span><span>{{intro.rule3}}</span></li>
+				<li><span>数量:</span><input type="number" max=99 min=1>件</li>
+			</ul>
+			<ul class="u2">
+				<li v-for="item in xqy"><img v-bind:src="'img/detail/'+item.src1" alt=""></li>
+			</ul>
+			<ul class="u3">
+				<li>
+					<p>我在这个网站http://t.cn/RA9yNOT?j领取了优惠券和红包，帮我优惠了不少钱。</p>
+					<p>来自：qeh***@163.com  2017-04-02 00:40:45</p>
+				</li>
+				<li>
+					<p>我在这个网站http://t.cn/RA9yNOT?j领取了优惠券和红包，帮我优惠了不少钱。</p>
+					<p>来自：qeh***@163.com  2017-04-02 00:40:45</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+		<div class="d1">
+			<span>立即购买</span>
+			<span>加入购物车</span>
+		</div>
+		<a href="" class="a1">返回顶部</a>
+</div>
+</script>
+<script type="text/javascript" src="js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="js/swiper.min.js"></script>
+ <!-- 详情页引入js -->
+ 	<!-- <script type="text/javascript">
+		$(".slideBox").slide({autoPlay:true});
+	</script>
+    <script>
+	    var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        loop:true,
+	        effect: 'flip',
+	        grabCursor: true,
+	        nextButton: '.swiper-button-next',
+	        prevButton: '.swiper-button-prev'
+	    });
+    </script> -->
+ <script type="text/javascript" src="js/vue1.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>
